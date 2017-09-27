@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jean Carlos">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="#">
+    </head>
+    <body>
+        <div class="text">             
+            <h1>FaleCmg!</h1>             
+            <div class="text-a">
+                <textarea required id="escrever" placeholder="Digite sua mensagem..."></textarea>    
+                <input id="enviar" type="submit" name="enviar">
+            </div>
+        </div>
+        <hr>
+        <div class="cvs">
+            
+        </div>
+        <footer>
+            <div class="rodape">
+                <p id="autor">Criado por @JeanCarlos.</p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script>
+            $('#enviar').click(function(){
+                var textAdd = $('#escrever').val();
+                $('#escrever').val('');
+                $('.cvs').append('<p id="item">' + textAdd + '</p>');
+            });                                   
+        </script>
+    </body>    
+</html>
